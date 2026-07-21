@@ -1,0 +1,226 @@
+﻿번호,대분야,소분야,약칭,학회명,등급,비고
+2024-S-001,AI,ML,AAAI,AAAI Conference on Artificial Intelligence,S,
+2024-S-002,AI,NLP,ACL,Annual Meeting of the Association for Computational Linguistics,S,
+2024-S-003,CS,SE,ASE,IEEE/ACM International Conference On Automated Software Engineering,S,
+2024-S-004,CS,OS,ASPLOS,Architectural Support for Programming Languages and Operating Systems,S,
+2024-S-005,CS,PL,CAV,International Conference on Computer-Aided Verification,S,
+2024-S-006,CS,Sec,CCS,ACM Conference on Computer and Communications Security,S,
+2024-S-007,CS,CGI,CHI,ACM Conference on Human Factors in Computing Systems,S,
+2024-S-008,CS,DM,CIKM,ACM Conference on Information and Knowledge Management,S,
+2024-S-009,CS,Net,CONEXT,ACM International Conference on Emerging Networking Experiments and Technologies,S,
+2024-S-010,CS,Sec,CRYPTO,International Cryptology Conference,S,
+2024-S-011,AI,CV,CVPR,IEEE/CVF Conference on Computer Vision and Pattern Recognition,S,발표형태 통합
+2024-S-012,CS,Arch,DAC,Design Automation Conference,S,
+2024-S-013,AI,CV,ECCV,European Conference on Computer Vision,S,발표형태 통합
+2024-S-014,AI,NLP,EMNLP,Conference on Empirical Methods in Natural Language Processing,S,
+2024-S-015,CS,Sec,EUROCRYPT,International Conference on the Theory and Applications of Cryptographic Techniques,S,
+2024-S-016,CS,OS,EuroSys,European Conference on Computer Systems,S,
+2024-S-017,CS,Alg,FOCS,IEEE Symposium on Foundations of Computer Science,S,
+2024-S-018,CS,SE,FSE,ACM International Conference on the Foundations of Software Engineering,S,"학회명, "
+,,,,,,약칭 변경
+2024-S-019,CS,Arch,HPCA,International Symposium on High-Performance Computer Architecture,S,
+2024-S-020,AI,CV,ICCV,IEEE/CVF International Conference on Computer Vision,S,발표형태 통합
+2024-S-021,CS,DB,ICDE,IEEE International Conference on Data Engineering,S,
+2024-S-022,CS,DM,ICDM,IEEE International Conference on Data Mining,S,
+2024-S-023,CS,PL,ICFP,ACM International Conference on Functional Programming,S,
+2024-S-024,AI,ML,ICLR,International Conference on Learning Representations,S,상향
+2024-S-025,AI,ML,ICML,IEEE International Conference on Machine Learning,S,
+2024-S-026,CS,SE,ICSE,IEEE/ACM International Conference on Software Engineering,S,학회명 변경
+2024-S-027,CS,Net,INFOCOM,IEEE Conference on Computer Communications,S,
+2024-S-028,CS,Arch,ISCA,ACM/IEEE International Symposium on Computer Architecture,S,
+2024-S-029,CS,CGI,ISMAR,IEEE International Symposium on Mixed and Augmented Reality,S,
+2024-S-030,AI,Bio,ISMB,Intelligent Systems for Molecular Biology,S,
+2024-S-031,CS,SE,ISSTA,ACM SIGSOFT International Symposium on Software Testing and Analysis,S,학회명 변경
+2024-S-032,CS,DM,KDD,ACM SIGKDD Conference on Knowledge Discovery and Data Mining,S,
+2024-S-033,CS,PL,LICS,ACM/IEEE Symposium on Logic in Computer Science,S,
+2024-S-034,AI,Bio,MICCAI,International Conference on Medical Image Computing and Computer Assisted Intervention,S,상향
+2024-S-035,CS,Arch,MICRO,IEEE/ACM International Symposium on Microarchitecture,S,
+2024-S-036,CS,Net,MobiCom,ACM International Conference on Mobile Computing and Networking,S,
+2024-S-037,CS,Net,MobiSys,"ACM International Conference on Mobile Systems, Applications, and Services",S,
+2024-S-038,AI,NLP,NAACL,Conference of the North American Chapter of the Association for Computational Linguistics,S,"학회명, "
+,,,,,,약칭 변경
+2024-S-039,CS,Sec,NDSS,ISOC Network & Distributed System Security Symposium,S,
+2024-S-040,AI,ML,NeurIPS,Conference on Neural Information Processing Systems,S,
+2024-S-041,CS,PL,OOPSLA,"ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications",S,
+2024-S-042,CS,Arch,PACT,International Conference on Parallel Architectures and Compilation Techniques,S,
+2024-S-043,CS,PL,PLDI,ACM SIGPLAN Conference on Programming Language Design and Implementation,S,
+2024-S-044,CS,HPC,PODC,ACM Symposium on Principles of Distributed Computing,S,상향
+2024-S-045,CS,DB,PODS,ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems,S,
+2024-S-046,CS,PL,POPL,ACM-SIGACT Symposium on Principles of Programming Languages,S,
+2024-S-047,CS,HPC,PPoPP,ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming,S,
+2024-S-048,CS,OS,RTAS,IEEE Real-Time and Embedded Technology and Applications Symposium,S,
+2024-S-049,CS,OS,RTSS,IEEE Real-Time Systems Symposium,S,
+2024-S-050,CS,Sec,S&P,IEEE Symposium on Security and Privacy,S,
+2024-S-051,CS,HPC,SC,"ACM/IEEE International Conference for High Performance Computing, Networking, Storage, and Analysis",S,
+2024-S-052,CS,Net,SIGCOMM,"ACM Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",S,
+2024-S-053,CS,CGI,SIGGRAPH,ACM SIG International Conference on Computer Graphics and Interactive Techniques,S,
+2024-S-054,CS,CGI,SIGGRAPH ASIA,ACM SIG International Conference on Computer Graphics and Interactive Techniques Asia,S,약칭 변경
+2024-S-055,CS,DM,SIGIR,ACM International Conference on Research and Development in Information Retrieval,S,
+2024-S-056,CS,OS,SIGMETRICS,ACM SIG on Computer and Communications Metrics and Performance,S,
+2024-S-057,CS,DB,SIGMOD,ACM SIGMOD International Conference on Management of Data,S,
+2024-S-058,CS,Alg,SOCG,Annual Symposium on Computational Geometry,S,
+2024-S-059,CS,Alg,SODA,ACM/SIAM Symposium on Discrete Algorithms,S,
+2024-S-060,CS,OS,SOSP,ACM SIGOPS Symposium on Operating Systems Principles,S,
+2024-S-061,CS,Alg,STOC,ACM Symposium on Theory of Computing,S,
+2024-S-062,CS,CGI,UBICOMP,ACM International Joint Conference on Pervasive and Ubiquitous Computing,S,상향
+2024-S-063,CS,CGI,UIST,ACM Symposium on User Interface Software and Technology,S,
+2024-S-064,CS,OS,USENIX ATC,USENIX Annual Technical Conference,S,
+2024-S-065,CS,OS,USENIX FAST,USENIX Conference on File and Storage Technologies,S,
+2024-S-066,CS,Net,USENIX NSDI,USENIX Symposium on Networked Systems Design and Implementation,S,
+2024-S-067,CS,OS,USENIX OSDI,USENIX Symposium on Operating Systems Design and Implementation,S,
+2024-S-068,CS,Sec,USENIX Security,USENIX Security Symposium,S,
+2024-S-069,CS,CGI,VIS,IEEE Visualization Conference,S,
+2024-S-070,CS,DB,VLDB,International Conference on Very Large DataBases,S,약칭 변경
+2024-S-071,CS,CGI,VR,IEEE Virtual Reality Conference,S,
+2024-S-072,CS,DM,WSDM,ACM International Conference on Web Search and Data Mining,S,상향
+2024-S-073,CS,DM,WWW,World-Wide Web Conference,S,
+2024-A-001,AI,ML,AAMAS,International Conference on Autonomous Agents and Multi-agent Systems,A,
+2024-A-002,AI,CV,ACCV,Asian Conference on Computer Vision,A,
+2024-A-003,AI,NLP,ACL Findings,Annual Meeting of the Association for Computational Linguistics,A,신규
+2024-A-004,CS,Sec,ACNS,International Conference on Applied Cryptography and Network Security,A,신규
+2024-A-005,CS,Sec,ACSAC,ACM Annual Computer Security Applications Conference,A,
+2024-A-006,AI,ML,AISTATS,International Conference on Artificial Intelligence and Statistics,A,
+2024-A-007,CS,Net,ANCS,ACM/IEEE Symposium on Architectures for Networking and Communications Systems,A,
+2024-A-008,CS,Sec,ASIACCS,ACM Asia Conference on Computer and Communications Security,A,
+2024-A-009,CS,Sec,ASIACRYPT,International Conference on the Theory and Application of Cryptology and Information Security,A,
+2024-A-010,CS,DM,ASONAM,International Conference on Advances in Social Networks Analysis and Mining,A,신규
+2024-A-011,AI,Bio,BCB,"ACM Conference on Bioinformatics, Computational Biology, and Health Informatics",A,
+2024-A-012,AI,Bio,BIBM,IEEE International Conference on Bioinformatics and Biomedicine,A,
+2024-A-013,CS,DB,BIGDATA,IEEE International Conference on BigData,A,
+2024-A-014,AI,CV,BMVC,British Machine Vision Conference,A,
+2024-A-015,CS,OS,CASES,"International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",A,
+2024-A-016,CS,PL,CC,International Conference on Compiler Construction,A,
+2024-A-017,CS,Alg,CCC,IEEE Conference on Computational Complexity,A,
+2024-A-018,CS,HPC,CCGRID,"IEEE/ACM International Symposium on Cluster, Cloud, and Grid Computing",A,
+2024-A-019,CS,PL,CGO,International Symposium on Code Generation and Optimization,A,
+2024-A-020,CS,Sec,CHES,Conference on Cryptographic Hardware and Embedded Systems,A,
+2024-A-021,CS,DB,CIDR,Biennial Conference on Innovative Data Systems Research,A,
+2024-A-022,CS,HPC,CLOUD,IEEE International Conference on Cloud Computing,A,신규
+2024-A-023,CS,HPC,CLUSTER,IEEE International Conference on Cluster Computing,A,
+2024-A-024,CS,Sec,CODASPY,ACM Conference on Data and Application Security and Privacy,A,신규
+2024-A-025,CS,OS,CODES+ISSS,International Conference on Hardware/Software Codesign and System Synthesis,A,
+2024-A-026,AI,NLP,COLING,International Conference on Computational Linguistics,A,
+2024-A-027,AI,ML,COLT,Annual Conference on Computational Learning Theory,A,
+2024-A-028,CS,PL,CONCUR,International Conference on Concurrency Theory,A,
+2024-A-029,AI,NLP,CoNLL,Conference on Computational Natural Language Learning,A,
+2024-A-030,AI,Robot,CoRL,Conference on Robot Learning,A,신규
+2024-A-031,CS,Alg,CPM,Annual Symposium on Combinatorial Pattern Matching,A,
+2024-A-032,CS,CGI,CSCW,ACM Conference on Computer supported cooperative work,A,
+2024-A-033,CS,Sec,CSF,IEEE Computer Security Foundations Symposium,A,신규
+2024-A-034,CS,DB,DASFAA,International Conference on Database Systems for Advanced Applications,A,신규
+2024-A-035,CS,Arch,DATE,Design Automation and Test in Europe Conference,A,
+2024-A-036,CS,HPC,DISC,International Symposium on Distributed Computing,A,
+2024-A-037,CS,Alg,DLT,International Conference on Developments in Language Theory,A,
+2024-A-038,CS,Sec,DSN,IEEE/IFIP International Conference on Dependable Systems and Networks,A,
+2024-A-039,AI,NLP,EACL,Conference of the European Chapter of the Association for Computational Linguistics,A,
+2024-A-040,AI,Bio,ECCB,European Conference on Computational Biology,A,
+2024-A-041,CS,PL,ECOOP,European Conference on Object Oriented Programming,A,
+2024-A-042,CS,OS,ECRTS,EuroMicro on Real-Time Systems,A,
+2024-A-043,CS,DB,EDBT,Extending Database Technology,A,
+2024-A-044,AI,NLP,EMNLP Findings,Conference on Empirical Methods in Natural Language Processing,A,신규
+2024-A-045,CS,OS,EMSOFT,ACM Conference on Embedded Software,A,
+2024-A-046,CS,Alg,ESA,European Symposium on Algorithms,A,
+2024-A-047,CS,PL,ESOP,European Symposium on Programming,A,
+2024-A-048,CS,Sec,ESORICS,European Symposium on Research in Computer Security,A,
+2024-A-049,CS,CGI,EG,Eurographics,A,약칭 변경
+2024-A-050,CS,HPC,EURO-PAR,European Conference on Parallel Precessing,A,
+2024-A-051,CS,Sec,EuroS&P,IEEE European Symposium on Security and Privacy,A,
+2024-A-052,CS,CGI,EuroVis,Eurographics Conference on Visualization,A,
+2024-A-053,CS,SE,FASE,International Conference on Fundamental Approaches to Software Engineering,A,
+2024-A-054,CS,Sec,FC,Financial Cryptography and Data Security,A,
+2024-A-055,CS,Arch,FCCM,IEEE International Symposium On Field-Programmable Custom Computing Machines,A,신규
+2024-A-056,CS,SE,FM,International Symposium on Formal Methods,A,
+2024-A-057,CS,Arch,FPGA,International Symposium on Field Programmable Gate Arrays,A,
+2024-A-058,CS,Arch,FPL,International Conference on Field-Programmable Logic and Applications,A,신규
+2024-A-059,CS,Sec,FSE,Conference on Fast Software Encryption,A,
+2024-A-060,CS,HPC,HPDC,International ACM Symposium on High Performance Distributed Computing,A,하향
+2024-A-061,CS,CGI,i3D,ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games,A,
+2024-A-062,CS,Alg,ICALP,"International Colloquium on Automata, Languages and Programming",A,
+2024-A-063,AI,NLP,ICASSP,"IEEE International Conference on Acoustics, Speech and Signal Processing",A,신규
+2024-A-064,CS,Arch,ICCAD,IEEE/ACM International Conference on Computer-Aided Design,A,
+2024-A-065,CS,Arch,ICCD,IEEE International Conference on Computer Design,A,
+2024-A-066,CS,OS,ICCPS,ACM/IEEE International Conference on Cyber-Physical Systems,A,
+2024-A-067,CS,HPC,ICDCS,IEEE International Conference on Distributed Computing Systems,A,
+2024-A-068,CS,Net,ICN,ACM Conference on Information-Centric Networking,A,신규
+2024-A-069,CS,Net,ICNP,IEEE International Conference on Network Protocols,A,
+2024-A-070,CS,HPC,ICPP,International Conference on Parallel Processing,A,
+2024-A-071,AI,Robot,ICRA,IEEE International Conference on Robotics and Automation,A,
+2024-A-072,CS,HPC,ICS,ACM International Conference on Supercomputing,A,
+2024-A-073,CS,SE,FSEICSME,IEEE International Conference on Software Maintenance and Evolution,A,약칭 변경
+2024-A-074,CS,SE,ICSOC,International Conference on Service-Oriented Computing,A,학회명 변경
+2024-A-075,CS,SE,ICST,"IEEE International Conference on Software Testing, Verification and Validation",A,
+2024-A-076,CS,SE,ICWS,International Conference on Web Services,A,학회명 변경
+2024-A-077,CS,DM,ICWSM,International Conference on Weblogs and Social Media,A,
+2024-A-078,CS,Arch,IISWC,IEEE International Symposium on Workload Characterization,A,
+2024-A-079,AI,ML,IJCAI,International Joint Conference on Artificial Intelligence,A,
+2024-A-080,AI,NLP,IJCNLP,International Joint Conference on Natural Language Processing,A,
+2024-A-081,CS,Net,IMC,ACM Internet Measurement Conference,A,
+2024-A-082,AI,NLP,InterSpeech,Conference of the International Speech Communication Association,A,
+2024-A-083,CS,HPC,IPDPS,IEEE International Parallel and Distributed Processing Symposium,A,
+2024-A-084,AI,Bio,IPMI,International Conference on Information Processing in Medical Imaging,A,신규
+2024-A-085,CS,Net,IPSN,ACM/IEEE Information Processing in Sensor Networks,A,
+2024-A-086,AI,Robot,IROS,IEEE/RSJ International Conference on Intelligent Robots and Systems,A,신규
+2024-A-087,CS,Alg,ISAAC,International Symposium on Algorithms and Computation,A,
+2024-A-088,CS,Arch,ISLPED,IEEE International Symposium on Low-Power Electronics and Design,A,
+2024-A-089,CS,Arch,ISPASS,IEEE International Symposium on Performance Analysis of Systems and Software,A,
+2024-A-090,CS,SE,ISSRE,IEEE International Symposium on Software Reliability Engineering,A,
+2024-A-091,CS,DM,ISWC,International Semantic Web Conference,A,
+2024-A-092,CS,CGI,IUI,International Conference on Intelligent User Interfaces,A,
+2024-A-093,CS,PL,LCTES,"ACM ACM SIGPLAN Conference on Languages, Compilers and Tools for Embedded Systems",A,
+2024-A-094,CS,OS,MASCOTS,IEEE Symposium Model Analysis and Simulation of Computer and Telecommunications Systems,A,
+2024-A-095,CS,Net,MASS,IEEE International Conference on Mobile Ad-Hoc and Smart Systems,A,신규
+2024-A-096,CS,Alg,MFCS,International Symposium on Mathematical Foundations of Computer Science,A,신규
+2024-A-097,CS,OS,MIDDLEWARE,ACM/IFIP/USENIX International Middleware Conference,A,
+2024-A-098,CS,OS,MLSys,Conference on Machine Learning and Systems,A,
+2024-A-099,CS,CGI,MM,ACM Multimedia Conference,A,
+2024-A-100,CS,OS,MMsys,ACM Multimedia Systems Conference,A,
+2024-A-101,CS,Net,MobiHoc,ACM International Symposium on Mobile Ad Hoc Networking and Computing,A,
+2024-A-102,CS,SE,MODELS,ACM/IEEE International Conference on Model Driven Engineering Languages and Systems,A,
+2024-A-103,CS,SE,MSR,International Conference on Mining Software Repositories,A,
+2024-A-104,CS,OS,MSST,IEEE International Conference on Massive Storage Systems and Technology,A,
+2024-A-105,AI,NLP,NAACL Findings,Conference of the North American Chapter of the Association for Computational Linguistics,A,신규
+2024-A-106,CS,Net,NOMS,IEEE/IFIP Network Operations and Management Symposium,A,
+2024-A-107,CS,DM,PAKDD,Pacific-Asia Conference on Knowledge Discovery and Data Mining,A,신규
+2024-A-108,CS,Net,PAM,Passive and Active Measurement Conference,A,
+2024-A-109,CS,Net,PERCOM,IEEE International Conference on Pervasive Computing and Communications,A,
+2024-A-110,CS,Sec,PETS,Proceedings on Privacy Enhancing Technologies,A,
+2024-A-111,CS,CGI,PG,Pacific Conference on Computer Graphics and Applications,A,약칭 변경
+2024-A-112,CS,Sec,PKC,International Conference on Practice and Theory in Public Key Cryptography,A,
+2024-A-113,CS,DM,PKDD,European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases,A,
+2024-A-114,AI,Bio,PSB,Pacific Symposium on Biocomputing,A,
+2024-A-115,CS,Sec,RAID,International Symposium on Recent Advances in Intrusion Detection,A,
+2024-A-116,CS,SE,RE,IEEE International Requirements Engineering Conference,A,
+2024-A-117,AI,Bio,RECOMB,Research in Computational Molecular Biology,A,
+2024-A-118,CS,DM,RecSys,ACM Conference on Recommender Systems,A,
+2024-A-119,AI,Robot,RSS,Robotics: Science and Systems Conference,A,
+2024-A-120,CS,SE,SANER,"IEEE International Conference on Software Analysis, Evolution and Reengineering",A,신규
+2024-A-121,CS,PL,SAS,International Static Analysis Symposium,A,
+2024-A-122,CS,CGI,SCA,ACM SIGGRAPH / Eurographics Symposium on Computer Animation,A,
+2024-A-123,CS,DM,SDM,SIAM International Conference on Data Mining,A,
+2024-A-124,CS,Net,SECON,"IEEE International Conference on Sensing, Communication, and Networking",A,
+2024-A-125,CS,Net,SenSys,ACM Conference on Embedded Networked Sensor Systems,A,
+2024-A-126,CS,CGI,SGP,Eurographics symposium on Geometry Processing,A,
+2024-A-127,CS,HPC,SOCC,ACM Symposium on Cloud Computing,A,
+2024-A-128,CS,Sec,SOUPS,Symposium On Usable Privacy and Security,A,
+2024-A-129,CS,HPC,SPAA,ACM Symposium on Parallelism in Algorithms and Architectures,A,
+2024-A-130,CS,OS,SRDS,IEEE Symposium on Reliable Distributed Systems,A,
+2024-A-131,CS,Alg,STACS,International Symposium on Theoretical Aspects of Computer Science,A,
+2024-A-132,CS,Alg,SWAT,Scandinavian Symposium on Algorithm Theory,A,학회명 변경
+2024-A-133,CS,OS,SYSTOR,ACM International Systems and Storage Conference,A,
+2024-A-134,CS,PL,TACAS,International Conference on Tools and Algorithms for Construction and Analysis of Systems,A,
+2024-A-135,AI,ML,UAI,Conference on Uncertainty in Artificial Intelligence,A,
+2024-A-136,CS,PL,VMCAI,"International Conference on Verification, Model Checking, and Abstract Interpretation",A,
+2024-A-137,CS,CGI,VRST,ACM Symposium on Virtual Reality Software and Technology,A,
+2024-A-138,AI,CV,WACV,IEEE/CVF Winter Conference on Applications of Computer Vision,A,신규
+2024-A-139,CS,Alg,WADS,Algorithms and Data Structures Symposium,A,학회명 변경
+2024-A-140,CS,CGI,WHC,IEEE World Haptics Conference,A,약칭 변경
+2024-A-141,CS,Net,WiOpt,"IEEE International Symposium on Modeling and Optimization in Mobile, Ad hoc, and Wireless Networks",A,신규
+2024-A-142,CS,Sec,WiSec,ACM Conference on Security and Privacy in Wireless and Mobile Networks,A,신규
+2024-A-143,CS,Net,WoWMoM,IEEE International Symposium on a World of Wireless Mobile and Multimedia Networks,A,
+,AI,CV,CVPR (poster),IEEE/CVF Conference on Computer Vision and Pattern Recognition,A,삭제
+,AI,CV,ECCV (poster),European Conference on Computer Vision,A,삭제
+,AI,ML,ICCI*CC,IEEE International Conference on Cognitive Informatics & Cognitive Computing,A,삭제
+,AI,CV,ICCV (poster),IEEE/CVF International Conference on Computer Vision,A,삭제
+,CS,Net,IM,IFIP/IEEE International Symposium on Integrated Network Management,A,삭제
+,AI,ML,SMC,"IEEE International Conference on Systems, Man, and Cybernetics",A,삭제
+,CS,OS,VEE,ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments,A,삭제
