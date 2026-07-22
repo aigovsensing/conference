@@ -10,10 +10,7 @@ S/A 등급 구성, 대분야(AI·CS)·소분야(16개)별 분포를 시각화하
 ## 🔗 참고 사이트 (데이터 출처)
 
 - **KIISE 우수 국제학술대회 목록 공식 안내**:
-  <https://www.kiise.or.kr/academy/main/getContent.fa?content_no=86&MENU_ID=130500>
-
-원본 데이터는 위 KIISE 공식 안내 페이지 및 연도별 PDF 목록을 정리한 것으로,
-`data/excellent_sw_conferences_<연도>.csv` (2014·2016·2018·2020·2024) 파일에 담겨 있습니다.
+원본 데이터는 [KIISE 공식 안내 페이지 및 연도별 PDF 목록](https://www.kiise.or.kr/academy/main/getContent.fa?content_no=86&MENU_ID=130500)을 정리한 것으로, `data/excellent_sw_conferences_<연도>.csv` (2014·2016·2018·2020·2024) 파일에 담겨 있습니다.
 
 > **연도별 데이터 안내** — 2014~2020년 원본 PDF에는 대분야(AI/CS)·소분야 분류가 없어,
 > 2024년 목록을 기준으로 학회 약칭을 매칭해 분류를 복원했습니다. 2024년 목록에 없는
