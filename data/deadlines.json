@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20",
+  "updated": "2026-07-26",
   "items": [
     {
       "abbr": "SIGMETRICS",
@@ -914,6 +914,13 @@
       "kind": "논문",
       "date": "2027-08-15",
       "note": "2차 라운드"
+    },
+    {
+      "abbr": "USENIX Security",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-08-26",
+      "note": "1차 라운드"
     }
   ]
 }
