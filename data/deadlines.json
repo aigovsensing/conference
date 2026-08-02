@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26",
+  "updated": "2026-08-02",
   "items": [
     {
       "abbr": "SIGMETRICS",
@@ -921,6 +921,25 @@
       "kind": "논문",
       "date": "2027-08-26",
       "note": "1차 라운드"
+    },
+    {
+      "abbr": "VLDB",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-09-01",
+      "note": "롤링(매월 1일)"
+    },
+    {
+      "abbr": "CHI",
+      "edition": "2028",
+      "kind": "초록",
+      "date": "2027-09-03"
+    },
+    {
+      "abbr": "USENIX NSDI",
+      "edition": "2028",
+      "kind": "초록",
+      "date": "2027-09-04"
     }
   ]
 }
