@@ -1,0 +1,51 @@
+name: Korea-hosted conferences monthly check
+
+# 매월 "한국 개최 학회 현황" 데이터를 점검한다:
+#  1) 종료 후 60일이 지난 학회를 past 로 보관하고 korea.js 재생성 (자동 커밋)
+#  2) 특별 관리 13개 학회의 개최지 발표 확인 체크리스트 이슈를 생성/갱신
+on:
+  schedule:
+    - cron: "0 19 1 * *" # 매월 1일 19:00 UTC = 2일 04:00 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Archive past conferences and build issue body
+        run: python3 scripts/check_korea.py --issue-body /tmp/korea-check-body.md
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/korea_conferences.json docs/assets/korea.js
+          git commit -m "chore: archive past Korea-hosted conferences"
+          git push
+
+      - name: Open or update the monthly check issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create korea-check --color D93F0B \
+            --description "한국 개최 학회 데이터 월간 점검" --force
+          TITLE="🇰🇷 한국 개최 학회 데이터 월간 점검 ($(date -u +%Y-%m))"
+          EXISTING=$(gh issue list --label korea-check --state open \
+            --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body-file /tmp/korea-check-body.md
+            echo "Commented on open issue #$EXISTING"
+          else
+            gh issue create --title "$TITLE" --label korea-check \
+              --body-file /tmp/korea-check-body.md
+          fi

@@ -1,0 +1,177 @@
+// 자동 생성 파일 — 직접 수정하지 마세요.
+// 원본은 data/korea_conferences.json 이며 scripts/build_korea.py 가 이 파일을 생성합니다.
+//
+// 개최지·일정·마감일은 조사 시점 발표 기준이므로,
+// 반드시 각 학회 공식 홈페이지에서 최신 정보를 확인해야 합니다.
+window.KIISE_KOREA = {
+  "updated": "2026-07-27",
+  "specialWatch": [
+    "ICML",
+    "ICLR",
+    "AAAI",
+    "NeurIPS",
+    "IJCAI",
+    "CVPR",
+    "ICCV",
+    "ECCV",
+    "ACL",
+    "EMNLP",
+    "NAACL",
+    "ICASSP",
+    "INTERSPEECH"
+  ],
+  "items": [
+    {
+      "abbr": "ICML",
+      "edition": "2026",
+      "year": 2026,
+      "country": "KR",
+      "name": "International Conference on Machine Learning",
+      "city": "서울",
+      "cityEn": "Seoul",
+      "venue": "COEX",
+      "start": "2026-07-06",
+      "end": "2026-07-11",
+      "deadlines": [
+        {
+          "kind": "초록",
+          "date": "2026-01-22"
+        },
+        {
+          "kind": "논문",
+          "date": "2026-01-28"
+        }
+      ],
+      "site": "https://icml.cc/",
+      "confirmed": true
+    },
+    {
+      "abbr": "KDD",
+      "edition": "2026",
+      "year": 2026,
+      "country": "KR",
+      "name": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+      "city": "제주",
+      "cityEn": "Jeju",
+      "venue": "ICC Jeju",
+      "start": "2026-08-09",
+      "end": "2026-08-13",
+      "deadlines": [
+        {
+          "kind": "논문",
+          "date": "2025-08-08",
+          "note": "1차 라운드"
+        },
+        {
+          "kind": "논문",
+          "date": "2026-02-08",
+          "note": "2차 라운드"
+        }
+      ],
+      "site": "https://kdd2026.kdd.org/",
+      "confirmed": true
+    },
+    {
+      "abbr": "ACCV",
+      "edition": "2026",
+      "year": 2026,
+      "country": "JP",
+      "name": "Asian Conference on Computer Vision",
+      "city": "오사카",
+      "cityEn": "Osaka",
+      "venue": "",
+      "start": "2026-12-14",
+      "end": "2026-12-18",
+      "deadlines": [
+        {
+          "kind": "논문",
+          "date": "2026-07-05"
+        }
+      ],
+      "site": "https://accv2026.org/",
+      "confirmed": true
+    },
+    {
+      "abbr": "NDSS",
+      "edition": "2027",
+      "year": 2027,
+      "country": "KR",
+      "name": "Network and Distributed System Security Symposium",
+      "city": "서울",
+      "cityEn": "Seoul",
+      "venue": "",
+      "start": "2027-03-22",
+      "end": "2027-03-26",
+      "deadlines": [
+        {
+          "kind": "논문",
+          "date": "2026-04-22",
+          "note": "1차 라운드"
+        },
+        {
+          "kind": "논문",
+          "date": "2026-07-22",
+          "note": "2차 라운드"
+        }
+      ],
+      "site": "https://www.ndss-symposium.org/ndss2027/",
+      "confirmed": true
+    },
+    {
+      "abbr": "ICRA",
+      "edition": "2027",
+      "year": 2027,
+      "country": "KR",
+      "name": "IEEE International Conference on Robotics and Automation",
+      "city": "서울",
+      "cityEn": "Seoul",
+      "venue": "COEX",
+      "start": "2027-05-24",
+      "end": "2027-05-28",
+      "deadlines": [
+        {
+          "kind": "논문",
+          "date": "2026-09-15"
+        }
+      ],
+      "site": "https://2027.ieee-icra.org/",
+      "confirmed": true
+    },
+    {
+      "abbr": "ACL",
+      "edition": "2027",
+      "year": 2027,
+      "country": "JP",
+      "name": "Annual Meeting of the Association for Computational Linguistics",
+      "city": "교토",
+      "cityEn": "Kyoto",
+      "venue": "",
+      "start": "2027-08-17",
+      "end": "2027-08-22",
+      "deadlines": [
+        {
+          "kind": "논문",
+          "date": "2027-01-19",
+          "note": "ARR 마감"
+        }
+      ],
+      "site": "https://2027.aclweb.org/",
+      "confirmed": true
+    },
+    {
+      "abbr": "ICASSP",
+      "edition": "2028",
+      "year": 2028,
+      "country": "JP",
+      "name": "IEEE International Conference on Acoustics, Speech and Signal Processing",
+      "city": "도쿄",
+      "cityEn": "Tokyo",
+      "venue": "Tokyo International Forum",
+      "start": "2028-05-29",
+      "end": "2028-06-02",
+      "deadlines": [],
+      "site": "https://2028.ieeeicassp.org/",
+      "confirmed": true
+    }
+  ]
+};

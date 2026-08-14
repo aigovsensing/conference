@@ -1,0 +1,86 @@
+name: Korea/Japan-hosted conferences weekly scan
+
+# 매주 주요 학회 공식 사이트를 스캔해 한국·일본 개최 신호(Seoul·COEX·Tokyo·Osaka 등)를
+# 찾고, 신규 학회가 감지되면 후보 항목을 채운 **자동 PR** 을 연다.
+# 사람은 PR 을 검토한 뒤 머지만 하면 라이브 대시보드에 반영된다(반자동).
+#
+# GitHub Actions 기본 토큰은 저장소 설정에 따라 PR 을 만들지 못할 수 있으므로
+# (Settings → Actions → General → "Allow GitHub Actions to create and approve
+# pull requests"), PR 생성이 막히면 원클릭 PR 링크가 담긴 이슈로 폴백한다.
+on:
+  schedule:
+    - cron: "0 20 * * 1" # 매주 월요일 20:00 UTC = 화요일 05:00 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Scan sites and build candidate items
+        run: python3 scripts/scan_korea.py --propose --pr-body /tmp/korea-pr-body.md
+
+      - name: Persist scan state and propose new conferences
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DEFAULT_BRANCH=$(gh repo view --json defaultBranchRef --jq .defaultBranchRef.name)
+
+          # 1) 스캔 상태를 기본 브랜치에 먼저 저장해 같은 신호가 매주 다시 제안되지 않게 한다.
+          #    (신규/미추적 파일도 감지되도록 stage 후 --cached 로 확인한다.)
+          git add data/korea_scan_state.json
+          if ! git diff --cached --quiet -- data/korea_scan_state.json; then
+            git commit -m "chore: update Korea/Japan-hosting scan state"
+            git push origin "HEAD:$DEFAULT_BRANCH"
+          fi
+
+          # 2) 새 후보 항목이 없으면 종료.
+          if git diff --quiet -- data/korea_conferences.json docs/assets/korea.js; then
+            echo "No new candidate conferences."
+            exit 0
+          fi
+
+          # 3) 후보 항목을 브랜치에 담아 푸시한다.
+          BRANCH="korea-auto/$(date -u +%Y%m%d%H%M)"
+          git checkout -b "$BRANCH"
+          git add data/korea_conferences.json docs/assets/korea.js
+          git commit -m "data: add auto-detected Korea/Japan-hosted conference(s)"
+          git push -u origin "$BRANCH"
+
+          gh label create korea-auto --color 1D76DB \
+            --description "자동 감지된 한국·일본 개최 학회 (검토 후 머지)" --force || true
+          TITLE="🌏 한국·일본 개최 학회 자동 감지 ($(date -u +%Y-%m-%d))"
+
+          # 4) PR 생성을 시도하고, 권한이 없어 막히면 원클릭 PR 링크가 담긴 이슈로 폴백한다.
+          if gh pr create --base "$DEFAULT_BRANCH" --head "$BRANCH" --label korea-auto \
+               --title "$TITLE" --body-file /tmp/korea-pr-body.md 2>/tmp/pr-err; then
+            echo "Opened PR from $BRANCH."
+          else
+            echo "::warning::PR 자동 생성이 막혀 이슈로 폴백합니다."
+            cat /tmp/pr-err || true
+            COMPARE="${{ github.server_url }}/${{ github.repository }}/compare/${DEFAULT_BRANCH}...${BRANCH}?expand=1"
+            {
+              echo "주간 자동 스캔이 **한국·일본 개최 후보**를 감지했습니다."
+              echo ""
+              echo "GitHub Actions 에 PR 생성 권한이 없어(저장소 설정) 대신 이 이슈로 알립니다."
+              echo "**➡️ [여기를 눌러 PR 열기]($COMPARE)** → 초록색 **Create pull request** →"
+              echo "내용 확인 후 **Merge** 하면 라이브 대시보드에 반영됩니다."
+              echo "(후보 브랜치 \`$BRANCH\` 는 이미 푸시되어 있습니다.)"
+              echo ""
+              cat /tmp/korea-pr-body.md
+              echo ""
+              echo "---"
+              echo "완전 자동 PR 로 바꾸려면 Settings → Actions → General → Workflow permissions 에서"
+              echo "**Allow GitHub Actions to create and approve pull requests** 를 켜세요."
+            } > /tmp/korea-issue.md
+            gh issue create --label korea-auto \
+              --title "$TITLE — 검토 필요" --body-file /tmp/korea-issue.md
+          fi
