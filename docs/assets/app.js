@@ -453,6 +453,7 @@
       state.year === "ALL"
         ? (years.length > 1 ? T.yearRange(years[0], years[years.length - 1]) : T.yearOpt(years[0]))
         : T.yearOpt(state.year);
+    syncSectionNavs();   // "이전 대비 변동" 버튼은 해당 카드가 있을 때만 노출
   }
 
   /* ---------------- theme toggle ---------------- */
@@ -613,11 +614,188 @@
     }
   }
 
-  /* ---------------- view menu (대시보드 / 달력 / 목록) ---------------- */
+  /* ---------------- 개최지별(한국/일본) 학회 현황 (view-korea) ---------------- */
+  function initKorea() {
+    const kr = window.KIISE_KOREA;
+    const body = $("#korea-body");
+    if (!body) return;
+    if (!kr || !kr.items || !kr.items.length) {
+      $("#korea-empty").hidden = false;
+      return;
+    }
+    const special = new Set(kr.specialWatch || []);
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const todayISO = today.getFullYear() + "-" +
+      String(today.getMonth() + 1).padStart(2, "0") + "-" +
+      String(today.getDate()).padStart(2, "0");
+    const fmtDot = (iso) => iso.replace(/-/g, ".");
+    const FLAG = { KR: "🇰🇷", JP: "🇯🇵" };
+    const countryOf = (it) => it.country || "KR"; // 이전 데이터 호환
+
+    // 특별 관리 대상(빨간색) 학회 안내 — 두 나라 공통
+    $("#korea-special-note").innerHTML =
+      `<span class="kr-note-label">${T.krSpecialLabel}</span>` +
+      [...special].map((a) => {
+        const hosted = kr.items.some((it) => it.abbr === a);
+        return `<span class="kr-special-chip${hosted ? " hosted" : ""}">${a}</span>`;
+      }).join("");
+
+    function deadlineCell(it) {
+      return (it.deadlines || []).map((d) => {
+        const dd = new Date(d.date + "T00:00:00");
+        const diff = Math.round((dd - today) / 86400000);
+        const badge = diff < 0
+          ? `<span class="kr-dday past">${T.krClosed}</span>`
+          : `<span class="kr-dday${diff <= 30 ? " near" : ""}">${diff === 0 ? "D-Day" : "D-" + diff}</span>`;
+        const note = d.note ? ` <span class="muted">(${T.note(d.note)})</span>` : "";
+        return `<div class="kr-dl">${badge}<span class="kr-dl-date">${fmtDot(d.date)}</span> ` +
+               `<span class="kr-dl-kind">${T.kind(d.kind)}</span>${note}</div>`;
+      }).join("") || `<span class="muted">${T.krTBA}</span>`;
+    }
+
+    function renderRows(tbody, items, flag) {
+      items.forEach((it) => {
+        const rec = dlByAbbr.get(it.abbr);
+        const isSp = special.has(it.abbr);
+        const ended = it.end && it.end < todayISO;
+        const tr = document.createElement("tr");
+        tr.className = (isSp ? "kr-special" : "") + (ended ? " kr-ended" : "");
+        const pills = rec
+          ? ` <span class="pill grade-${rec.grade.toLowerCase()}">${rec.grade}</span>` +
+            `<span class="pill ${rec.major.toLowerCase()}">${rec.major}</span>`
+          : "";
+        const star = isSp ? `<span class="kr-star" title="${T.krSpecialTitle}">★</span> ` : "";
+        // 자동 감지·미확정 항목 표시 (주간 스캔이 채운 후보)
+        const review = it.needsReview
+          ? ` <span class="kr-review" title="${T.krReviewTitle}">${T.krReview}</span>` : "";
+        const place = (LANG === "en" ? (it.cityEn || it.city) : it.city) +
+          (it.venue ? ` · ${it.venue}` : "");
+        const dateCell = (it.start && it.end)
+          ? `${fmtDot(it.start)} ~ ${fmtDot(it.end)}` +
+            (ended ? ` <span class="kr-dday past">${T.krEnded}</span>` : "")
+          : `<span class="muted">${T.krTBA}</span>`;
+        tr.innerHTML =
+          `<td class="kr-name-cell">${star}<b class="kr-abbr">${it.abbr} ${it.edition}</b>${pills}${review}` +
+          `<div class="kr-fullname">${it.name}</div></td>` +
+          `<td class="kr-dl-cell">${deadlineCell(it)}</td>` +
+          `<td class="kr-place">${flag} ${place}</td>` +
+          `<td class="kr-dates">${dateCell}</td>` +
+          `<td><a class="kr-site" href="${it.site}" target="_blank" rel="noopener">${T.krSiteLink}</a></td>`;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // 나라별 섹션(한국 → 일본), 각 섹션은 연도별 표로 구성
+    function renderCountry(country) {
+      const cItems = kr.items.filter((it) => countryOf(it) === country);
+      const sec = el("section", "kr-country");
+      sec.id = "kr-country-" + country;   // scroll target for the section sub-nav
+      sec.appendChild(el("h3", "kr-country-heading",
+        `${FLAG[country]} ${T.krCountry(country)} <span class="changes-badge">${cItems.length}</span>`));
+      if (!cItems.length) {
+        sec.appendChild(el("p", "kr-country-empty muted", T.krCountryEmpty(country)));
+        body.appendChild(sec);
+        return;
+      }
+      const years = [...new Set(cItems.map((it) => it.year))].sort();
+      years.forEach((y) => {
+        const items = cItems.filter((it) => it.year === y)
+          .sort((a, b) => (a.start || "").localeCompare(b.start || "") || a.abbr.localeCompare(b.abbr));
+        sec.appendChild(el("h4", "kr-year-heading",
+          `${T.yearOpt(y)} <span class="changes-badge">${items.length}</span>`));
+        const scroll = el("div", "table-scroll");
+        const table = el("table", "kr-table",
+          `<thead><tr>` +
+          `<th>${T.krColName}</th><th>${T.krColDeadline}</th><th>${T.krColPlace}</th>` +
+          `<th>${T.krColSchedule}</th><th>${T.krColSite}</th>` +
+          `</tr></thead>`);
+        const tbody = document.createElement("tbody");
+        renderRows(tbody, items, FLAG[country]);
+        table.appendChild(tbody);
+        scroll.appendChild(table);
+        sec.appendChild(scroll);
+      });
+      body.appendChild(sec);
+    }
+
+    body.innerHTML = "";
+    renderCountry("KR");
+    renderCountry("JP");
+
+    body.appendChild(el("p", "kr-updated muted",
+      T.krUpdated(fmtDot(kr.updated || ""))));
+  }
+
+  /* ---------------- in-view quick-jump sub-navigation ---------------- */
+  // Every view (대시보드 / 개최지별 / 달력 / 목록) opens with a row of menu buttons
+  // pinned to the top. Clicking one jumps straight to that section so the reader
+  // never has to scroll the page down to find it. Each `.section-nav button`
+  // carries a data-target pointing at the id of the section it reveals.
+  const sectionNavs = [];   // {syncVisibility} handles, refreshed by syncSectionNavs()
+
+  function initSectionNav(nav) {
+    const btns = [...nav.querySelectorAll("button[data-target]")];
+    if (!btns.length) return;
+    const header = $(".site-header");
+
+    // keep the sticky sub-nav parked right below the (also sticky) site header
+    function positionNav() { nav.style.top = (header ? header.offsetHeight : 0) + "px"; }
+    positionNav();
+    window.addEventListener("resize", positionNav);
+
+    function scrollToTarget(id) {
+      const target = document.getElementById(id);
+      if (!target) return;
+      if (target.tagName === "DETAILS") target.open = true;   // reveal collapsed sections
+      const offset = (header ? header.offsetHeight : 0) + nav.offsetHeight + 16;
+      const y = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+    }
+    btns.forEach((b) => b.addEventListener("click", () => scrollToTarget(b.dataset.target)));
+
+    // scrollspy: highlight whichever section currently sits in the viewport band.
+    // Track the live set of intersecting targets and mark the topmost (button order).
+    const setActive = (id) =>
+      btns.forEach((b) => b.classList.toggle("active", b.dataset.target === id));
+    if ("IntersectionObserver" in window) {
+      const visible = new Set();
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) visible.add(e.target.id); else visible.delete(e.target.id);
+        });
+        const active = btns.map((b) => b.dataset.target).find((id) => visible.has(id));
+        if (active) setActive(active);
+      }, { rootMargin: "-45% 0px -45% 0px", threshold: 0 });
+      btns.forEach((b) => {
+        const t = document.getElementById(b.dataset.target);
+        if (t) io.observe(t);
+      });
+    }
+
+    // hide a menu button whose target is absent or currently hidden
+    // (e.g. "이전 대비 변동" only exists for years that have a predecessor)
+    function syncVisibility() {
+      btns.forEach((b) => {
+        const t = document.getElementById(b.dataset.target);
+        b.hidden = !t || t.hidden;
+      });
+      nav.hidden = btns.every((b) => b.hidden);
+    }
+    syncVisibility();
+    sectionNavs.push({ syncVisibility });
+  }
+
+  function initSectionNavs() {
+    document.querySelectorAll(".section-nav").forEach(initSectionNav);
+  }
+  function syncSectionNavs() { sectionNavs.forEach((n) => n.syncVisibility()); }
+
+  /* ---------------- view menu (대시보드 / 한국 개최 / 달력 / 목록) ---------------- */
   function initViews() {
     const tabs = document.querySelectorAll(".view-tabs button");
     const views = {
       dashboard: $("#view-dashboard"),
+      korea: $("#view-korea"),
       calendar: $("#view-calendar"),
       list: $("#view-list"),
     };
@@ -808,8 +986,11 @@
   buildFilters();
   initConfSearch();
   initCalendar();
+  initKorea();
+  initSectionNavs();
   initViews();
   refresh();
   renderMonthChart();
+  syncSectionNavs();   // month-card 등 렌더 후 최종 버튼 노출 상태 동기화
   initTheme();
 })();

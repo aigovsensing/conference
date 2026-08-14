@@ -341,6 +341,75 @@ a.conf-link::after { content: " ↗"; font-size: .72em; opacity: .5; }
 .tt-line { display: flex; align-items: center; gap: 5px; }
 .tt-dot { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
 
+/* ---------- 한국 개최 학회 현황 (view-korea) ---------- */
+:root { --kr-red: #d32f2f; }
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) { --kr-red: #ff6b6b; }
+}
+:root[data-theme="dark"] { --kr-red: #ff6b6b; }
+
+.kr-country { margin-top: 8px; }
+.kr-country + .kr-country { margin-top: 30px; padding-top: 24px; border-top: 2px solid var(--border); }
+.kr-country-heading {
+  font-size: 1.12rem; font-weight: 800; margin: 0 0 4px;
+  display: flex; align-items: center; gap: 8px;
+}
+.kr-country-empty { margin: 6px 0 0; font-size: .84rem; }
+.kr-year-heading {
+  font-size: .98rem; font-weight: 700; margin: 18px 0 10px;
+  display: flex; align-items: center; gap: 8px;
+}
+.kr-year-heading:first-of-type { margin-top: 12px; }
+.kr-table thead th { cursor: default; }
+.kr-name-cell { min-width: 240px; }
+.kr-abbr { font-weight: 700; margin-right: 6px; }
+.kr-fullname { color: var(--text-2); font-size: .8rem; margin-top: 2px; }
+.kr-special .kr-abbr, .kr-special .kr-fullname, .kr-special .kr-star {
+  color: var(--kr-red);
+}
+.kr-special .kr-abbr { font-weight: 800; }
+.kr-star { font-size: .9em; }
+.kr-place, .kr-dates { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.kr-dl { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.kr-dl + .kr-dl { margin-top: 4px; }
+.kr-dl-date { font-variant-numeric: tabular-nums; font-weight: 600; }
+.kr-dl-kind { color: var(--text-2); font-size: .78rem; }
+.kr-dday {
+  font-size: .68rem; font-weight: 700; padding: 1px 7px; border-radius: 999px;
+  background: color-mix(in srgb, var(--cs) 14%, transparent); color: var(--cs);
+  white-space: nowrap;
+}
+.kr-dday.near { background: color-mix(in srgb, var(--kr-red) 14%, transparent); color: var(--kr-red); }
+.kr-dday.past { background: var(--surface-2); color: var(--muted); }
+.kr-site { font-size: .82rem; font-weight: 600; white-space: nowrap; }
+.kr-special-note {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+  padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px;
+  background: var(--surface-2); font-size: .78rem; margin-bottom: 6px;
+}
+.kr-note-label { color: var(--text-2); font-weight: 600; margin-right: 2px; }
+.kr-special-chip {
+  font-size: .72rem; font-weight: 700; padding: 1px 8px; border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--kr-red) 40%, transparent);
+  color: var(--kr-red); background: color-mix(in srgb, var(--kr-red) 8%, transparent);
+}
+.kr-special-chip.hosted {
+  background: var(--kr-red); color: #fff; border-color: transparent;
+}
+.kr-ended td { opacity: .55; }
+.kr-review {
+  font-size: .68rem; font-weight: 700; padding: 1px 7px; border-radius: 999px;
+  white-space: nowrap; vertical-align: middle;
+  border: 1px dashed color-mix(in srgb, #f4b400 55%, transparent);
+  background: color-mix(in srgb, #f4b400 12%, transparent); color: #9a7b00;
+}
+:root[data-theme="dark"] .kr-review { color: #e8c359; }
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .kr-review { color: #e8c359; }
+}
+.kr-updated { font-size: .76rem; margin: 14px 0 0; }
+.muted { color: var(--muted); }
+
 /* ---------- view menu tabs ---------- */
 .view-tabs { display: flex; gap: 4px; margin: 4px 0 22px; border-bottom: 1px solid var(--border); }
 .view-tabs button {
@@ -352,6 +421,27 @@ a.conf-link::after { content: " ↗"; font-size: .72em; opacity: .5; }
 .view-tabs button.active { color: var(--text); border-bottom-color: #4c8dff; }
 @media (max-width: 480px) {
   .view-tabs button { padding: 9px 10px; font-size: .86rem; }
+}
+
+/* ---------- in-view quick-jump sub-navigation (all views) ---------- */
+/* sticks just below the site header; its `top` is set in JS to the header height */
+.section-nav {
+  position: sticky; z-index: 15;
+  display: flex; flex-wrap: wrap; gap: 8px;
+  padding: 12px 0; margin: 0 0 20px;
+  background: var(--plane); border-bottom: 1px solid var(--border);
+}
+.section-nav button {
+  appearance: none; cursor: pointer; font: inherit;
+  font-size: .9rem; font-weight: 600; color: var(--text-2);
+  background: var(--surface); border: 1px solid var(--border); border-radius: 999px;
+  padding: 8px 16px; transition: background .15s, color .15s, border-color .15s;
+}
+.section-nav button:hover { color: var(--text); background: var(--surface-2); }
+.section-nav button.active { color: #fff; background: #4c8dff; border-color: #4c8dff; }
+@media (max-width: 480px) {
+  .section-nav { gap: 6px; }
+  .section-nav button { padding: 7px 12px; font-size: .82rem; }
 }
 
 /* ---------- paper submission deadline calendar ---------- */
