@@ -6,7 +6,7 @@
 // 실제 마감일은 반드시 각 학회 공식 홈페이지에서 확인해야 합니다.
 // abbr 은 docs/assets/data.js 의 약칭과 일치해야 캘린더 칩이 학회 정보와 연결됩니다.
 window.KIISE_DEADLINES = {
-  "updated": "2026-08-16",
+  "updated": "2026-08-23",
   "items": [
     {
       "abbr": "SIGMETRICS",
@@ -990,6 +990,18 @@ window.KIISE_DEADLINES = {
       "edition": "2028",
       "kind": "초록",
       "date": "2027-09-18"
+    },
+    {
+      "abbr": "USENIX FAST",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-09-22"
+    },
+    {
+      "abbr": "ICLR",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-09-23"
     }
   ]
 };

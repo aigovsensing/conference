@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-16",
+  "updated": "2026-08-23",
   "items": [
     {
       "abbr": "SIGMETRICS",
@@ -983,6 +983,18 @@
       "edition": "2028",
       "kind": "초록",
       "date": "2027-09-18"
+    },
+    {
+      "abbr": "USENIX FAST",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-09-22"
+    },
+    {
+      "abbr": "ICLR",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-09-23"
     }
   ]
 }
