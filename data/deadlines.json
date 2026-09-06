@@ -1,19 +1,6 @@
 {
-  "updated": "2026-08-30",
+  "updated": "2026-09-06",
   "items": [
-    {
-      "abbr": "SIGMETRICS",
-      "edition": "2027",
-      "kind": "초록",
-      "date": "2026-07-03",
-      "note": "1차 라운드"
-    },
-    {
-      "abbr": "SODA",
-      "edition": "2027",
-      "kind": "초록",
-      "date": "2026-07-06"
-    },
     {
       "abbr": "POPL",
       "edition": "2027",
@@ -1014,6 +1001,38 @@
       "kind": "논문",
       "date": "2027-10-01",
       "note": "롤링(매월 1일)"
+    },
+    {
+      "abbr": "NAACL",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-06",
+      "note": "ARR 마감"
+    },
+    {
+      "abbr": "WWW",
+      "edition": "2028",
+      "kind": "초록",
+      "date": "2027-10-06"
+    },
+    {
+      "abbr": "ICDE",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-07",
+      "note": "1차 라운드"
+    },
+    {
+      "abbr": "AAMAS",
+      "edition": "2028",
+      "kind": "초록",
+      "date": "2027-10-08"
+    },
+    {
+      "abbr": "IPDPS",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-08"
     }
   ]
 }

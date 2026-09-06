@@ -6,21 +6,8 @@
 // 실제 마감일은 반드시 각 학회 공식 홈페이지에서 확인해야 합니다.
 // abbr 은 docs/assets/data.js 의 약칭과 일치해야 캘린더 칩이 학회 정보와 연결됩니다.
 window.KIISE_DEADLINES = {
-  "updated": "2026-08-30",
+  "updated": "2026-09-06",
   "items": [
-    {
-      "abbr": "SIGMETRICS",
-      "edition": "2027",
-      "kind": "초록",
-      "date": "2026-07-03",
-      "note": "1차 라운드"
-    },
-    {
-      "abbr": "SODA",
-      "edition": "2027",
-      "kind": "초록",
-      "date": "2026-07-06"
-    },
     {
       "abbr": "POPL",
       "edition": "2027",
@@ -1021,6 +1008,38 @@ window.KIISE_DEADLINES = {
       "kind": "논문",
       "date": "2027-10-01",
       "note": "롤링(매월 1일)"
+    },
+    {
+      "abbr": "NAACL",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-06",
+      "note": "ARR 마감"
+    },
+    {
+      "abbr": "WWW",
+      "edition": "2028",
+      "kind": "초록",
+      "date": "2027-10-06"
+    },
+    {
+      "abbr": "ICDE",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-07",
+      "note": "1차 라운드"
+    },
+    {
+      "abbr": "AAMAS",
+      "edition": "2028",
+      "kind": "초록",
+      "date": "2027-10-08"
+    },
+    {
+      "abbr": "IPDPS",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-08"
     }
   ]
 };
