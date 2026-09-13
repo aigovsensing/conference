@@ -1,32 +1,6 @@
 {
-  "updated": "2026-09-06",
+  "updated": "2026-09-13",
   "items": [
-    {
-      "abbr": "POPL",
-      "edition": "2027",
-      "kind": "논문",
-      "date": "2026-07-09"
-    },
-    {
-      "abbr": "SODA",
-      "edition": "2027",
-      "kind": "논문",
-      "date": "2026-07-09"
-    },
-    {
-      "abbr": "SIGMETRICS",
-      "edition": "2027",
-      "kind": "논문",
-      "date": "2026-07-10",
-      "note": "1차 라운드"
-    },
-    {
-      "abbr": "SIGMOD",
-      "edition": "2027",
-      "kind": "초록",
-      "date": "2026-07-10",
-      "note": "1차 라운드"
-    },
     {
       "abbr": "CHES",
       "edition": "2027",
@@ -1033,6 +1007,38 @@
       "edition": "2028",
       "kind": "논문",
       "date": "2027-10-08"
+    },
+    {
+      "abbr": "ASPLOS",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-13",
+      "note": "가을 라운드"
+    },
+    {
+      "abbr": "WWW",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-13"
+    },
+    {
+      "abbr": "AAMAS",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-15"
+    },
+    {
+      "abbr": "CHES",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-15",
+      "note": "분기 마감"
+    },
+    {
+      "abbr": "CSCW",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-15"
     }
   ]
 }

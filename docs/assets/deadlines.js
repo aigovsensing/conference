@@ -6,34 +6,8 @@
 // 실제 마감일은 반드시 각 학회 공식 홈페이지에서 확인해야 합니다.
 // abbr 은 docs/assets/data.js 의 약칭과 일치해야 캘린더 칩이 학회 정보와 연결됩니다.
 window.KIISE_DEADLINES = {
-  "updated": "2026-09-06",
+  "updated": "2026-09-13",
   "items": [
-    {
-      "abbr": "POPL",
-      "edition": "2027",
-      "kind": "논문",
-      "date": "2026-07-09"
-    },
-    {
-      "abbr": "SODA",
-      "edition": "2027",
-      "kind": "논문",
-      "date": "2026-07-09"
-    },
-    {
-      "abbr": "SIGMETRICS",
-      "edition": "2027",
-      "kind": "논문",
-      "date": "2026-07-10",
-      "note": "1차 라운드"
-    },
-    {
-      "abbr": "SIGMOD",
-      "edition": "2027",
-      "kind": "초록",
-      "date": "2026-07-10",
-      "note": "1차 라운드"
-    },
     {
       "abbr": "CHES",
       "edition": "2027",
@@ -1040,6 +1014,38 @@ window.KIISE_DEADLINES = {
       "edition": "2028",
       "kind": "논문",
       "date": "2027-10-08"
+    },
+    {
+      "abbr": "ASPLOS",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-13",
+      "note": "가을 라운드"
+    },
+    {
+      "abbr": "WWW",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-13"
+    },
+    {
+      "abbr": "AAMAS",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-15"
+    },
+    {
+      "abbr": "CHES",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-15",
+      "note": "분기 마감"
+    },
+    {
+      "abbr": "CSCW",
+      "edition": "2028",
+      "kind": "논문",
+      "date": "2027-10-15"
     }
   ]
 };
